@@ -10,27 +10,40 @@
     <style>
         .Oben {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
 
         .Card {
             display: flex;
             justify-content: space-evenly;
         }
+
+        .background {
+            border: 10px rgb(255, 0, 0) rgb(197, 26, 26);
+            padding: 100px;
+            background: rgb(0, 0, 0);
+            background-clip: padding-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background: rgb(85, 85, 85);
+        }
     </style>
 </head>
 
-
+<div class="background">
 
 
 
 <body>
     <div class="Oben">
 
-    <sl-button variant="danger" outline>Home</sl-button>
-    <sl-button variant="danger" outline>All</sl-button>
-    <sl-button variant="danger" outline>Categories</sl-button>
-    <sl-button variant="danger" outline>Contact</sl-button></div>
+    <sl-button variant="default">Home</sl-button>
+    <sl-button variant="default">All</sl-button>
+    <sl-button variant="default">Categories</sl-button>
+    <sl-button variant="default">Contact</sl-button></div>
 
     <h2 style="font-size:350%;">Try it out!</h2>
 
@@ -70,6 +83,8 @@
           justify-content: space-between;
           align-items: center;
         }
+
+        
       </style>
 
 <sl-card class="card-overview">
@@ -138,6 +153,7 @@
     }
   </style>
   </div>
+</div>
     
 </body>
 </html>
