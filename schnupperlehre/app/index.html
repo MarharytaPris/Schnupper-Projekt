@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HearTheSound</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+
+    <style>
+        .Oben {
+            justify-content: flex-start;
+        }
+
+        .Card {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .background {
+            padding: 90px;
+            background: rgb(0, 0, 0);
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background: rgb(85, 85, 85);
+        }
+        .guitare {
+          display: flex;
+          justify-content: space-around;
+        }
+    </style>
+</head>
+
+<div class="background">
+
+
+<body>
+
+    <div class="Oben">
+
+    <sl-button variant="danger">Home</sl-button>
+    <sl-button variant="danger">All</sl-button>
+    <sl-button variant="danger">Categories</sl-button>
+    <sl-button variant="danger">Contact</sl-button>
+    </div>
+
+    <h2 style="font-size:350%;">Try it out!</h2>
+
+    <div class="guitare"> 
+
+      <script>
+        const guitare=[{
+            image:"GuitarFront1.jpg", tittel:"Jet E-Guitar S-Style 380 Serie", beschreibung: "This guitar is as cute as it is playful. Bring it home today!", preis: "367 CHF", info:"More Info", site:"Site1.html"
+        },{
+            image:"GuitarSite Pink.webp", tittel:"Jet E-Guitar S-Style 320 Serie", beschreibung: "This guitar is as cute as it is playful. Bring it home today!", preis: "367 CHF", info:"More Info", site:"Site2.html"
+        },{
+            image:"GuitarBlau2.webp", tittel:"Jet E-Guitar S-Style 300 Serie", beschreibung: "This guitar is as cute as it is playful. Bring it home today!", preis: "367 CHF", info:"More Info", site:"Site3.html"
+        },{
+            image:"GuitarSite Pink.webp", tittel:"Jet E-Guitar S-Style 320 Serie", beschreibung: "This guitar is as cute as it is playful. Bring it home today!", preis: "367 CHF", info:"More Info", site:"Site2.html"
+        }]
+        const display = document.querySelector(".guitare");
+        display.innerHTML = "";
+        guitare.forEach(git=>{const card = document.createElement("sl-card");
+    
+        
+        card.innerHTML= 
+          `<sl-card class="card-overview">
+            <img
+              slot="image"
+              src="${git.image}"
+              alt="The Jet Guitar"/>
+          
+            <strong>${git.tittel}</strong><br />
+            ${git.beschreibung}<br />
+            <small>${git.preis}</small>
+          
+            <div slot="footer"><a href="${git.site}"> 
+              <sl-button variant="primary" pill>${git.info}</sl-button></a>
+              <sl-rating></sl-rating>
+            </div>
+          </sl-card>`
+    
+        display.appendChild(card)});
+      </script>
+    
+      <style>
+        .card-overview {
+          max-width: 500px;
+        }
+      
+        .card-overview small {
+          color: var(--sl-color-neutral-500);
+        }
+      
+        .card-overview [slot='footer'] {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        
+      </style>
+    </div>
+</body>
+</html>

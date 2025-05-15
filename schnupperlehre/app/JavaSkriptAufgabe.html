@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="display"> </span>
+
+    <input type="text" id="nameInput" placeholder="Dein Name">
+    <input type="text" id="haarInput" placeholder="Dein Haar farbe">
+    <button onclick="nameVonBenutzer()">Los!</button>
+
+    <script>
+        display = document.getElementById("display");
+        function nameVonBenutzer() {
+          let name = document.getElementById("nameInput").value;
+          let haar = document.getElementById("haarInput").value;
+
+    
+          let message = "Hallo " + name;
+          let message2 = "Haar farbe ist " + haar;
+          display.innerText = display.innerText + message + ", " + message2;
+        }
+      </script>
+
+</body>
+</html>

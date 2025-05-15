@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+    <style>
+      .Knopfen {
+        text-align: center;
+        align-content: center;
+      }
+      .Text {
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Text">
+      <span id="display"> </span>
+    
+
+    <div class="Knopfen">
+      <sl-button onClick="fügeZahlZumDisplayHinZu(1)" variant="danger" outline
+        >1</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(2)" variant="danger" outline
+        >2</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(3)" variant="danger" outline
+        >3</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu('/')" variant="danger" outline
+        >/</sl-button
+      >
+    </div>
+
+    <div class="Knopfen">
+      <sl-button onClick="fügeZahlZumDisplayHinZu(4)" variant="danger" outline
+        >4</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(5)" variant="danger" outline
+        >5</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(6)" variant="danger" outline
+        >6</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu('*')" variant="danger" outline
+        >*</sl-button
+      >
+    </div>
+
+    <div class="Knopfen">
+      <sl-button onClick="fügeZahlZumDisplayHinZu(7)" variant="danger" outline
+        >7</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(8)" variant="danger" outline
+        >8</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu(9)" variant="danger" outline
+        >9</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu('+')" variant="danger" outline
+        >+</sl-button
+      >
+    </div>
+
+    <div class="Knopfen">
+      <sl-button onClick="fügeZahlZumDisplayHinZu(0)" variant="danger" outline
+        >0</sl-button
+      >
+      <sl-button onClick="fügeZahlZumDisplayHinZu('.')" variant="danger" outline
+        >.</sl-button
+      >
+      <sl-button onClick="ausrechnen()" variant="danger" outline>=</sl-button>
+      <sl-button onClick="fügeZahlZumDisplayHinZu('-')" variant="danger" outline
+        >-</sl-button
+      >
+    </div>
+  
+    <div class="Knopfen">
+      <sl-button onClick="clearDisplay()" variant="danger" outline>Clear</sl-button>
+      <sl-button onClick="deleteZahl()" variant="danger" outline>Delete</sl-button>
+    </div>
+  </div>
+  
+    <script>
+      display = document.getElementById("display");
+      function fügeZahlZumDisplayHinZu(zahl) {
+        display.innerText = display.innerText + zahl;
+      }
+      function ausrechnen() {
+        display.innerText = eval(display.innerText);
+      }
+      function clearDisplay() {
+        display.textContent = "";
+      }  
+      function deleteZahl() {
+        display.innerText = display.innerText.slice(0, -1);
+      }
+    </script>
+  </body>
+</html>
