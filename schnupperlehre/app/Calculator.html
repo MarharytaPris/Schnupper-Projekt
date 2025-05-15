@@ -12,11 +12,11 @@
     <style>
       .Knopfen {
         text-align: center;
-        align-content: center;
+        align-items: center;
       }
       .Text {
         text-align: center;
-        align-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -87,9 +87,13 @@
       <sl-button onClick="clearDisplay()" variant="danger" outline>Clear</sl-button>
       <sl-button onClick="deleteZahl()" variant="danger" outline>Delete</sl-button>
     </div>
+
+    <div class="Knopfen">
+    <a href="index.html"> <sl-button variant="danger" size="large" style="width: 50%;">Home!</sl-button></a>
+    </div>
   </div>
 
-      <a href="index.html"> <sl-button variant="danger" size="large" style="width: 90%;">Home!</sl-button></a>
+     
 
     <script>
       display = document.getElementById("display");
